@@ -1,13 +1,17 @@
 --[[
 	Mod PQD_world para Minetest
+	Copyright (C) 2022 BrunoMine (https://github.com/BrunoMine)
 	
+	Recebeste uma cópia da GNU Lesser General
+	Public License junto com esse software,
+	se não, veja em <http://www.gnu.org/licenses/>. 
   ]]
 
 local spawn_pos = minetest.setting_get_pos("static_spawnpoint")
 
 -- Item para teleportar para o spawn
 minetest.register_craftitem("pqd_spawn:pqd_item", {
-	description = "Balão de Resgate para o spawn",
+	description = "Balão de Resgate",
 	inventory_image = "pqd_spawn_item.png",
 	groups = {},
 	stack_max = 1,
@@ -48,7 +52,7 @@ minetest.register_craftitem("pqd_spawn:pqd_item", {
 			minetest.chat_send_player(user:get_player_name(), "Retornou para Spawn")
 			
 			-- Altera o item no inventario
-			itemstack:set_name("vessels:glass_bottle")
+			itemstack:set_name("farming:string")
 			
 			-- Som de teleporte
 			minetest.sound_play("pqd_spawn_item", {
@@ -72,8 +76,12 @@ minetest.register_craftitem("pqd_spawn:pqd_item", {
 minetest.register_craft( {
 	output = "pqd_spawn:pqd_item",
 	recipe = {
-		{"", "default:mese_crystal_fragment", ""},
-		{"default:apple", "default:mese_crystal_fragment", "default:apple"},
-		{"", "vessels:glass_bottle", ""}
+	
+		{"", 			"wool:red", 		"default:stick"},
+		
+		{"wool:yellow", 	"default:torch", 	"wool:yellow"},
+		
+		{"farming:string", 	"wool:red", 		"farming:string"}
+		
 	}
 })

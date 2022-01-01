@@ -13,6 +13,6 @@ Autores de mídias (texturas, modelos and sons)
 Todos que não estao listados aqui:
 BrunoMine, Bruno Borges <borgesdossantosbruno@gmail.com> (CC BY-SA 3.0)
 
-DrMinky - https://freesound.org/people/DrMinky/ (CC BY):
+Sauron974 - https://freesound.org/people/Sauron974/ (CC BY):
 	pqd_spawn_item.ogg (CC BY-SA 3.0)
 
